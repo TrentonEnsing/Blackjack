@@ -35,3 +35,24 @@ class Deck:
 """ CARD CLASS TESTING """
 # card = Card("Hearts", 10)
 # print(card)
+
+
+""" DECK CLASS TESTING """
+# def test_deck():
+#     deck = Deck()
+#     print(f"Initial number of cards: {len(deck.cards)}")
+
+#     print("\nShuffling deck")
+#     deck.shuffle()
+    
+#     print("Dealing 4 cards: ")
+#     for _ in range(4):
+#         card = deck.deal()
+#         print(f"Dealt: {card}")
+    
+#     print(f"Remaining number of cards: {len(deck.cards)}")
+
+# test_deck()
+
+
+""" HAND CLASS TESTING """
