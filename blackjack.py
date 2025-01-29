@@ -28,8 +28,32 @@ class Deck:
 #HAND CLASS
 class Hand:
     def __init__(self):
-        
+        self.cards = []
 
+    def add_card(self, card):
+        self.cards.append(card)
+
+    def calculate_score(self):
+        score = 0
+        ace_count = 0
+        value_map = {
+            '2' : 2, '3' : 3, '4' : 4, '5' : 5, '6' : 6, '7' : 7, '8' : 8, '9' : 9, '10' : 10,
+            'Jack' : 10, 'Queen' : 10, 'King' : 10, 'Ace' : 11
+        }
+
+        for card in self.cards:
+            score += value_map[card.value]
+            if card.value == 'Ace':
+                ace_count += 1
+
+        while score > 21 and ace_count:
+            score -= 10
+            ace_count -= 1
+        
+        return score
+    
+    def display_hand(self):
+        return ', '.join(str(card) for card in self.cards) 
 
 
 
