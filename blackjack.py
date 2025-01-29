@@ -26,7 +26,9 @@ class Deck:
         return self.cards.pop()
 
 #HAND CLASS
-
+class Hand:
+    def __init__(self):
+        
 
 
 
